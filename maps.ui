@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>382</width>
+    <height>561</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(27, 29, 35)</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>381</width>
+      <height>541</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QGridLayout" name="gridLayout">
+       <property name="sizeConstraint">
+        <enum>QLayout::SetNoConstraint</enum>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLineEdit" name="scale">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+	border: 2px solid rgb(37, 39, 48);
+	border-radius: 20px;
+	color: #FFF;
+	padding-right: 20px;
+	padding-left: 20px;
+	background-color: rgb(34, 36, 44);
+}
+QLineEdit:hover {
+	border: 2px solid rgb(48, 50, 62);
+}
+QLineEdit:focus {
+	border: 2px solid rgb(85, 170, 255);
+	background-color: rgb(43, 45, 46);
+}</string>
+         </property>
+         <property name="placeholderText">
+          <string>Масштаб</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" rowspan="2">
+        <widget class="QLineEdit" name="full_address">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+	border: 2px solid rgb(37, 39, 48);
+	border-radius: 20px;
+	color: #FFF;
+	padding-right: 20px;
+	padding-left: 20px;
+	background-color: rgb(34, 36, 44);
+}
+QLineEdit:hover {
+	border: 2px solid rgb(48, 50, 62);
+}
+QLineEdit:focus {
+	border: 2px solid rgb(85, 170, 255);
+	background-color: rgb(43, 45, 46);
+}</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="placeholderText">
+          <string>Полный адрес</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLineEdit" name="coordinates">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+	border: 2px solid rgb(37, 39, 48);
+	border-radius: 20px;
+	color: #FFF;
+	padding-right: 20px;
+	padding-left: 20px;
+	background-color: rgb(34, 36, 44);
+}
+QLineEdit:hover {
+	border: 2px solid rgb(48, 50, 62);
+}
+QLineEdit:focus {
+	border: 2px solid rgb(85, 170, 255);
+	background-color: rgb(43, 45, 46);
+}</string>
+         </property>
+         <property name="placeholderText">
+          <string>Координаты</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="resetButton">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	border: 2px solid rgb(37, 39, 48);
+	border-radius: 10px;
+	color: #FFF;
+	padding-right: 10px;
+	padding-left: 10px;
+	background-color: rgb(34, 36, 44);
+}
+QPushButton:hover {
+	border: 2px solid rgb(48, 50, 62);
+}
+QPushButton:focus {
+	border: 2px solid rgb(85, 170, 255);
+	background-color: rgb(43, 45, 46);
+}</string>
+         </property>
+         <property name="text">
+          <string>Сброс поискового результата</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="comboBox">
+         <property name="styleSheet">
+          <string notr="true">QComboBox {
+	border: 2px solid rgb(37, 39, 48);
+	border-radius: 20px;
+	color: #FFF;
+	padding-right: 20px;
+	padding-left: 20px;
+	background-color: rgb(34, 36, 44);
+}
+QComboBox QAbstractItemView {
+	color: rgb(37, 39, 48);
+	background-color: rgb(34, 36, 44);
+	padding: 10px;
+	selection-background-color: rgb(34, 36, 44);
+}
+</string>
+         </property>
+         <property name="editable">
+          <bool>false</bool>
+         </property>
+         <property name="currentText">
+          <string>Схема</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Схема</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Спутник</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Гибрид</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QPushButton" name="findButton">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+	border: 2px solid rgb(37, 39, 48);
+	border-radius: 10px;
+	color: #FFF;
+	padding-right: 10px;
+	padding-left: 10px;
+	background-color: rgb(34, 36, 44);
+}
+QPushButton:hover {
+	border: 2px solid rgb(48, 50, 62);
+}
+QPushButton:focus {
+	border: 2px solid rgb(85, 170, 255);
+	background-color: rgb(43, 45, 46);
+}</string>
+         </property>
+         <property name="text">
+          <string>Найти</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QCheckBox" name="checkBox">
+         <property name="styleSheet">
+          <string notr="true">QCheckBox {
+	border: 2px solid rgb(37, 39, 48);
+	border-radius: 10px;
+	color: #FFF;
+	padding-right: 10px;
+	padding-left: 10px;
+	background-color: rgb(34, 36, 44);
+}</string>
+         </property>
+         <property name="text">
+          <string>Почтовый индекс</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0" colspan="2">
+        <widget class="QLabel" name="label">
+         <property name="styleSheet">
+          <string notr="true">QLabel {
+	border: 2px solid rgb(37, 39, 48);
+	color: #FFF;
+	padding-right: 20px;
+	padding-left: 20px;
+	background-color: rgb(34, 36, 44);
+}
+</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
