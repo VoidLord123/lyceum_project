@@ -119,12 +119,11 @@ class MainWindow(Ui_MainWindow, QMainWindow):
             self.set_img()
 
     def get_image(self, coordinates, spn):
-        #В документации и материале к урокам я не нашёл значения параметра l в Static Api, тут добавьте
-        modes = {"Схема": "map", "Спутник": '', "Гибрид": ""}
+        modes = {"Схема": "map", "Спутник": 'sat', "Гибрид": "sat,skl"}
         size = (f"{self.map.width() if self.map.width() < 650 else 650},"
                 f"{self.map.height() if self.map.height() < 450 else 450}")
 
-        content = draw(coordinates, spn, pt='~'.join(self.points), mode='map', size=size)
+        content = draw(coordinates, spn, pt='~'.join(self.points), mode=modes[self.type.currentText()], size=size)
         image = QImage.fromData(content.read())
         return image
 
